@@ -9,6 +9,8 @@ import {PDFDownload} from './components/PDFDownload.jsx';
 import { useState } from 'react';
 import filePath from './assets/e-Pizza.pdf';
 import { LoanInfoDocument } from './components/PDFComponents/LoanInfoDocument.jsx';
+import { LoanInfoDocument2Page } from './components/PDFComponents/LoanInfoDocument2page.jsx';
+import { LoanInfoDynamic } from './components/PDFComponents/LoanInfoDynamic.jsx';
 
 function App() { 
   let dt = new Date();
@@ -34,6 +36,15 @@ function App() {
     <>        
       <Header />
       <main>   
+      <PDFViewer showToolbar={false} height={800} width={800}>
+        <LoanInfoDynamic></LoanInfoDynamic>     
+       </PDFViewer>
+      {/* <PDFViewer showToolbar={false} height={800} width={800}>
+        <LoanInfoDocument2Page></LoanInfoDocument2Page>     
+       </PDFViewer> */}
+       {/* <PDFViewer showToolbar={false} height={800} width={800}>
+        <LoanInfoDocument></LoanInfoDocument>     
+       </PDFViewer> */}
       {/*  
       <PDFViewer showToolbar={false} height={800} width={800}>
         <LoanInfoDocument></LoanInfoDocument>     

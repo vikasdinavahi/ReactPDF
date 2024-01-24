@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import { Page, Text, View, Document, StyleSheet,Link , Svg, Circle, Font, Image}  from '@react-pdf/renderer';
-import img from '../../assets/FCBT.png';
+import img from '../../assets/32.png';
 
 Font.register({
     family: 'Oswald',
@@ -81,8 +81,9 @@ let dt = new Date();
             border:1,
           },
           page:{
-             
-          },
+            backgroundColor:'#fff',
+            paddingBottom: '50pt',
+         },
           tableRow:{
             flexDirection:'row',
             border:0,
@@ -128,8 +129,7 @@ let dt = new Date();
             flexWrap:'nowrap',
             minHeight:30,
           },
-          pdfTable:{
-            flexDirection:'row',
+          pdfTable:{            
             border:0,
             backgroundColor:"#ffe4b5",              
             margin:5,
@@ -138,7 +138,7 @@ let dt = new Date();
           pageNumber: {
             position: 'absolute',
             fontSize: 12,
-            bottom: 30,
+            bottom: 55,
             left: 0,
             right: 0,
             textAlign: 'center',
@@ -147,16 +147,528 @@ let dt = new Date();
 
 
   })
+//   interface RowsKeyValuePair  {
+//     rowId: string;
+//     label1: string;
+//     data1: string | undefined | null;
+//     dataTye1?: RowsValueDataType;
+//     element1?: ReactElement | ReactElement[];
+//     label2: string;
+//     data2: string | undefined | null;
+//     dataTye2?: RowsValueDataType;
+//     element2?: ReactElement | ReactElement[];
+//   };
 
+
+//   const data =  [
+//     {
+//         rowId: 'primary1',
+//         label1: 'Loan Alias',
+//         data1: '6123',           
+//         label2: 'Current Balance',
+//         data2: '3030303',
+      
+//     },
+//     {
+//         rowId: 'primary2',
+//         label1: 'All-iIn Rate',
+//         data1: '11.11%',           
+//         label2: 'C Project',
+//         data2: '445123',
+      
+//     },
+//     {
+//         rowId: 'primary1',
+//         label1: 'Loan Alias',
+//         data1: '6123',           
+//         label2: 'Current Balance',
+//         data2: '3030303',
+      
+//     },
+//     {
+//         rowId: 'primary2',
+//         label1: 'All-iIn Rate',
+//         data1: '11.11%',           
+//         label2: 'C Project',
+//         data2: '445123',
+      
+//     },{
+//         rowId: 'primary1',
+//         label1: 'Loan Alias',
+//         data1: '6123',           
+//         label2: 'Current Balance',
+//         data2: '3030303',
+      
+//     },
+//     {
+//         rowId: 'primary2',
+//         label1: 'All-iIn Rate',
+//         data1: '11.11%',           
+//         label2: 'C Project',
+//         data2: '445123',
+      
+//     },{
+//         rowId: 'primary1',
+//         label1: 'Loan Alias',
+//         data1: '6123',           
+//         label2: 'Current Balance',
+//         data2: '3030303',
+      
+//     },
+//     {
+//         rowId: 'primary2',
+//         label1: 'All-iIn Rate',
+//         data1: '11.11%',           
+//         label2: 'C Project',
+//         data2: '445123',
+      
+//     },{
+//         rowId: 'primary1',
+//         label1: 'Loan Alias',
+//         data1: '6123',           
+//         label2: 'Current Balance',
+//         data2: '3030303',
+      
+//     },
+//     {
+//         rowId: 'primary2',
+//         label1: 'All-iIn Rate',
+//         data1: '11.11%',           
+//         label2: 'C Project',
+//         data2: '445123',
+      
+//     },{
+//         rowId: 'primary1',
+//         label1: 'Loan Alias',
+//         data1: '6123',           
+//         label2: 'Current Balance',
+//         data2: '3030303',
+      
+//     },
+//     {
+//         rowId: 'primary2',
+//         label1: 'All-iIn Rate',
+//         data1: '11.11%',           
+//         label2: 'C Project',
+//         data2: '445123',
+      
+//     },{
+//         rowId: 'primary1',
+//         label1: 'Loan Alias',
+//         data1: '6123',           
+//         label2: 'Current Balance',
+//         data2: '3030303',
+      
+//     },
+//     {
+//         rowId: 'primary2',
+//         label1: 'All-iIn Rate',
+//         data1: '11.11%',           
+//         label2: 'C Project',
+//         data2: '445123',
+      
+//     },{
+//         rowId: 'primary1',
+//         label1: 'Loan Alias',
+//         data1: '6123',           
+//         label2: 'Current Balance',
+//         data2: '3030303',
+      
+//     },
+//     {
+//         rowId: 'primary2',
+//         label1: 'All-iIn Rate',
+//         data1: '11.11%',           
+//         label2: 'C Project',
+//         data2: '445123',
+      
+//     },{
+//         rowId: 'primary1',
+//         label1: 'Loan Alias',
+//         data1: '6123',           
+//         label2: 'Current Balance',
+//         data2: '3030303',
+      
+//     },
+//     {
+//         rowId: 'primary2',
+//         label1: 'All-iIn Rate',
+//         data1: '11.11%',           
+//         label2: 'C Project',
+//         data2: '445123',
+      
+//     },{
+//         rowId: 'primary1',
+//         label1: 'Loan Alias',
+//         data1: '6123',           
+//         label2: 'Current Balance',
+//         data2: '3030303',
+      
+//     },
+//     {
+//         rowId: 'primary2',
+//         label1: 'All-iIn Rate',
+//         data1: '11.11%',           
+//         label2: 'C Project',
+//         data2: '445123',
+      
+//     },{
+//         rowId: 'primary1',
+//         label1: 'Loan Alias',
+//         data1: '6123',           
+//         label2: 'Current Balance',
+//         data2: '3030303',
+      
+//     },
+//     {
+//         rowId: 'primary2',
+//         label1: 'All-iIn Rate',
+//         data1: '11.11%',           
+//         label2: 'C Project',
+//         data2: '445123',
+      
+//     },{
+//         rowId: 'primary1',
+//         label1: 'Loan Alias',
+//         data1: '6123',           
+//         label2: 'Current Balance',
+//         data2: '3030303',
+      
+//     },
+//     {
+//         rowId: 'primary2',
+//         label1: 'All-iIn Rate',
+//         data1: '11.11%',           
+//         label2: 'C Project',
+//         data2: '445123',
+      
+//     },{
+//         rowId: 'primary1',
+//         label1: 'Loan Alias',
+//         data1: '6123',           
+//         label2: 'Current Balance',
+//         data2: '3030303',
+      
+//     },
+//     {
+//         rowId: 'primary2',
+//         label1: 'All-iIn Rate',
+//         data1: '11.11%',           
+//         label2: 'C Project',
+//         data2: '445123',
+      
+//     },{
+//         rowId: 'primary1',
+//         label1: 'Loan Alias',
+//         data1: '6123',           
+//         label2: 'Current Balance',
+//         data2: '3030303',
+      
+//     },
+//     {
+//         rowId: 'primary2',
+//         label1: 'All-iIn Rate',
+//         data1: '11.11%',           
+//         label2: 'C Project',
+//         data2: '445123',
+      
+//     },{
+//         rowId: 'primary1',
+//         label1: 'Loan Alias',
+//         data1: '6123',           
+//         label2: 'Current Balance',
+//         data2: '3030303',
+      
+//     },
+//     {
+//         rowId: 'primary2',
+//         label1: 'All-iIn Rate',
+//         data1: '11.11%',           
+//         label2: 'C Project',
+//         data2: '445123',
+      
+//     },{
+//         rowId: 'primary1',
+//         label1: 'Loan Alias',
+//         data1: '6123',           
+//         label2: 'Current Balance',
+//         data2: '3030303',
+      
+//     },
+//     {
+//         rowId: 'primary2',
+//         label1: 'All-iIn Rate',
+//         data1: '11.11%',           
+//         label2: 'C Project',
+//         data2: '445123',
+      
+//     },{
+//         rowId: 'primary1',
+//         label1: 'Loan Alias',
+//         data1: '6123',           
+//         label2: 'Current Balance',
+//         data2: '3030303',
+      
+//     },
+//     {
+//         rowId: 'primary2',
+//         label1: 'All-iIn Rate',
+//         data1: '11.11%',           
+//         label2: 'C Project',
+//         data2: '445123',
+      
+//     },{
+//         rowId: 'primary1',
+//         label1: 'Loan Alias',
+//         data1: '6123',           
+//         label2: 'Current Balance',
+//         data2: '3030303',
+      
+//     },
+//     {
+//         rowId: 'primary2',
+//         label1: 'All-iIn Rate',
+//         data1: '11.11%',           
+//         label2: 'C Project',
+//         data2: '445123',
+      
+//     },{
+//         rowId: 'primary1',
+//         label1: 'Loan Alias',
+//         data1: '6123',           
+//         label2: 'Current Balance',
+//         data2: '3030303',
+      
+//     },
+//     {
+//         rowId: 'primary2',
+//         label1: 'All-iIn Rate',
+//         data1: '11.11%',           
+//         label2: 'C Project',
+//         data2: '445123',
+      
+//     },{
+//         rowId: 'primary1',
+//         label1: 'Loan Alias',
+//         data1: '6123',           
+//         label2: 'Current Balance',
+//         data2: '3030303',
+      
+//     },
+//     {
+//         rowId: 'primary2',
+//         label1: 'All-iIn Rate',
+//         data1: '11.11%',           
+//         label2: 'C Project',
+//         data2: '445123',
+      
+//     },{
+//         rowId: 'primary1',
+//         label1: 'Loan Alias',
+//         data1: '6123',           
+//         label2: 'Current Balance',
+//         data2: '3030303',
+      
+//     },
+//     {
+//         rowId: 'primary2',
+//         label1: 'All-iIn Rate',
+//         data1: '11.11%',           
+//         label2: 'C Project',
+//         data2: '445123',
+      
+//     },{
+//         rowId: 'primary1',
+//         label1: 'Loan Alias',
+//         data1: '6123',           
+//         label2: 'Current Balance',
+//         data2: '3030303',
+      
+//     },
+//     {
+//         rowId: 'primary2',
+//         label1: 'All-iIn Rate',
+//         data1: '11.11%',           
+//         label2: 'C Project',
+//         data2: '445123',
+      
+//     },{
+//         rowId: 'primary1',
+//         label1: 'Loan Alias',
+//         data1: '6123',           
+//         label2: 'Current Balance',
+//         data2: '3030303',
+      
+//     },
+//     {
+//         rowId: 'primary2',
+//         label1: 'All-iIn Rate',
+//         data1: '11.11%',           
+//         label2: 'C Project',
+//         data2: '445123',
+      
+//     },{
+//         rowId: 'primary1',
+//         label1: 'Loan Alias',
+//         data1: '6123',           
+//         label2: 'Current Balance',
+//         data2: '3030303',
+      
+//     },
+//     {
+//         rowId: 'primary2',
+//         label1: 'All-iIn Rate',
+//         data1: '11.11%',           
+//         label2: 'C Project',
+//         data2: '445123',
+      
+//     },{
+//         rowId: 'primary1',
+//         label1: 'Loan Alias',
+//         data1: '6123',           
+//         label2: 'Current Balance',
+//         data2: '3030303',
+      
+//     },
+//     {
+//         rowId: 'primary2',
+//         label1: 'All-iIn Rate',
+//         data1: '11.11%',           
+//         label2: 'C Project',
+//         data2: '445123',
+      
+//     },{
+//         rowId: 'primary1',
+//         label1: 'Loan Alias',
+//         data1: '6123',           
+//         label2: 'Current Balance',
+//         data2: '3030303',
+      
+//     },
+//     {
+//         rowId: 'primary2',
+//         label1: 'All-iIn Rate',
+//         data1: '11.11%',           
+//         label2: 'C Project',
+//         data2: '445123',
+      
+//     },{
+//         rowId: 'primary1',
+//         label1: 'Loan Alias',
+//         data1: '6123',           
+//         label2: 'Current Balance',
+//         data2: '3030303',
+      
+//     },
+//     {
+//         rowId: 'primary2',
+//         label1: 'All-iIn Rate',
+//         data1: '11.11%',           
+//         label2: 'C Project',
+//         data2: '445123',
+      
+//     },{
+//         rowId: 'primary1',
+//         label1: 'Loan Alias',
+//         data1: '6123',           
+//         label2: 'Current Balance',
+//         data2: '3030303',
+      
+//     },
+//     {
+//         rowId: 'primary2',
+//         label1: 'All-iIn Rate',
+//         data1: '11.11%',           
+//         label2: 'C Project',
+//         data2: '445123',
+      
+//     },{
+//         rowId: 'primary1',
+//         label1: 'Loan Alias',
+//         data1: '6123',           
+//         label2: 'Current Balance',
+//         data2: '3030303',
+      
+//     },
+//     {
+//         rowId: 'primary2',
+//         label1: 'All-iIn Rate',
+//         data1: '11.11%',           
+//         label2: 'C Project',
+//         data2: '445123',
+      
+//     },{
+//         rowId: 'primary1',
+//         label1: 'Loan Alias',
+//         data1: '6123',           
+//         label2: 'Current Balance',
+//         data2: '3030303',
+      
+//     },
+//     {
+//         rowId: 'primary2',
+//         label1: 'All-iIn Rate',
+//         data1: '11.11%',           
+//         label2: 'C Project',
+//         data2: '445123',
+      
+//     },{
+//         rowId: 'primary1',
+//         label1: 'Loan Alias',
+//         data1: '6123',           
+//         label2: 'Current Balance',
+//         data2: '3030303',
+      
+//     },
+//     {
+//         rowId: 'primary2',
+//         label1: 'All-iIn Rate',
+//         data1: '11.11%',           
+//         label2: 'C Project',
+//         data2: '445123',
+      
+//     },{
+//         rowId: 'primary1',
+//         label1: 'Loan Alias',
+//         data1: '6123',           
+//         label2: 'Current Balance',
+//         data2: '3030303',
+      
+//     },
+//     {
+//         rowId: 'primary2',
+//         label1: 'All-iIn Rate',
+//         data1: '11.11%',           
+//         label2: 'C Project',
+//         data2: '445123',
+      
+//     },{
+//         rowId: 'primary1',
+//         label1: 'Loan Alias',
+//         data1: '6123',           
+//         label2: 'Current Balance',
+//         data2: '3030303',
+      
+//     },
+//     {
+//         rowId: 'primary2',
+//         label1: 'All-iIn Rate',
+//         data1: '11.11%',           
+//         label2: 'C Project',
+//         data2: '445123',
+      
+//     },
+   
+// ];
 
 export const LoanInfoDocument=() =>{
     return (
-        <Document author="FCBT" title="LoanInfo" creator="FCBT" producer="FCBT"  >
+        <Document author="Vikas" title="React-pdf" creator="React-pdf" producer="React-pdf"  >
             <Page size="A4" orientation="portrait" height="600px" style={styles.page} > 
                 <View style={styles.header} fixed >           
                     <View style={{ color: 'white', textAlign: 'left', alignItems:"flex-start", margin: 2, width:65 +'%' ,border:0 }}>
                         <Text style={styles.hContent}>Printed:[{currentDate}] </Text>
-                        <Text style={styles.hContent} >Loan Information:Seraphina Smith </Text>
+                        <Text style={styles.hContent} >Loan Information:Sri Rama </Text>
                     </View>
                     <Image src={img} style={styles.image}></Image>                    
                 </View>
@@ -169,7 +681,7 @@ export const LoanInfoDocument=() =>{
                                     <Text style={styles.td}> Customer Legal Name: </Text>
                                 </View>
                                 <View style={styles.tableCol} >  
-                                    <Text style={styles.tdValue}> Seraphina Smith </Text>
+                                    <Text style={styles.tdValue}> Sri Rama </Text>
                                 </View>
                             </View>
                         </View>
@@ -186,7 +698,26 @@ export const LoanInfoDocument=() =>{
                             </View>
                         </View>
                     </View>
-                    -------------------------------------------
+
+                    {/* {data.map((item) => (                      
+                       <View style={styles.tableRow}  > 
+                            <View style={styles.tableCol} >  
+                                <Text style={styles.td}> {item.label1}: </Text>
+                            </View>
+                            <View style={styles.tableCol} >  
+                                <Text style={styles.tdValue}> {item.data1} </Text>
+                            </View>
+                            <View style={styles.tableCol} >  
+                                <Text style={styles.td}> {item.label2}: </Text>
+                            </View>
+                            <View style={styles.tableCol} >  
+                                <Text style={styles.tdValue}> {item.data2} </Text>
+                            </View>
+                        </View>   
+                    )
+                    )};  */}
+
+                    
                     <View style={styles.tableRow} >  
                         <View style={styles.tableColMain} >
                             <View style={styles.tableRow}  > 
@@ -211,7 +742,7 @@ export const LoanInfoDocument=() =>{
                             </View>
                         </View>
                     </View>
-                    -----------------------------------------------------------
+                    
                     <View style={styles.tableRow} >  
                         <View style={styles.tableColMain} >
                             <View style={styles.tableRow}  > 
@@ -236,7 +767,7 @@ export const LoanInfoDocument=() =>{
                             </View>
                         </View>
                     </View>
-                    -----------------------------------------------------------
+                    
                     <View style={styles.tableRow} >  
                         <View style={styles.tableColMain} >
                             <View style={styles.tableRow}  > 
@@ -261,7 +792,7 @@ export const LoanInfoDocument=() =>{
                             </View>
                         </View>
                     </View>
-                    -----------------------------------------------------------
+                    
                     <View style={styles.tableRow} >  
                         <View style={styles.tableColMain} >
                             <View style={styles.tableRow}  > 
@@ -286,7 +817,7 @@ export const LoanInfoDocument=() =>{
                             </View>
                         </View>
                     </View>
-                    -----------------------------------------------------------
+                    
                     <View style={styles.tableRow} >  
                         <View style={styles.tableColMain} >
                             <View style={styles.tableRow}  > 
@@ -311,7 +842,7 @@ export const LoanInfoDocument=() =>{
                             </View>
                         </View>
                     </View>
-                    -----------------------------------------------------------
+                    
                     <View style={styles.tableRow} >  
                         <View style={styles.tableColMain} >
                             <View style={styles.tableRow}  > 
@@ -336,7 +867,7 @@ export const LoanInfoDocument=() =>{
                             </View>
                         </View>
                     </View>
-                    -----------------------------------------------------------
+                    
                     <View style={styles.tableRow} >  
                         <View style={styles.tableColMain} >
                             <View style={styles.tableRow}  > 
@@ -361,7 +892,7 @@ export const LoanInfoDocument=() =>{
                             </View>
                         </View>
                     </View>
-                    -----------------------------------------------------------
+                    
                     <View style={styles.tableRow} >  
                         <View style={styles.tableColMain} >
                             <View style={styles.tableRow}  > 
@@ -380,13 +911,13 @@ export const LoanInfoDocument=() =>{
                                         <Text style={styles.td}> Guarantor: </Text>
                                     </View>
                                     <View style={styles.tableCol} >  
-                                        <Text style={styles.tdValue}> Karthik Chakravartula </Text>
+                                        <Text style={styles.tdValue}> Jim Robets </Text>
                                     </View>
                                 </View>
                             </View>
                         </View>
                     </View>                  
-                    -----------------------------------------------------------
+                    
                     <View style={styles.tableRow} >  
                         <View style={styles.tableColMain} >
                             <View style={styles.tableRow}  > 
@@ -394,7 +925,7 @@ export const LoanInfoDocument=() =>{
                                     <Text style={styles.td}> Loan Officer: </Text>
                                 </View>
                                 <View style={styles.tableCol} >  
-                                    <Text style={styles.tdValue}> Vikas Dinavahi </Text>
+                                    <Text style={styles.tdValue}> Paul Adams </Text>
                                 </View>
                             </View>
                         </View>
@@ -411,7 +942,7 @@ export const LoanInfoDocument=() =>{
                             </View>
                         </View>
                     </View>
-                    -----------------------------------------------------------
+                    
                     <View style={styles.tableRow} >  
                         <View style={styles.tableColMain} >
                             <View style={styles.tableRow}  > 
@@ -430,13 +961,13 @@ export const LoanInfoDocument=() =>{
                                         <Text style={styles.td}> Legal Address: </Text>
                                     </View>
                                     <View style={styles.tableCol} >  
-                                        <Text style={styles.tdValue}> 1676 CR 328 , Jourdanton, TX, 78026 </Text>
+                                        <Text style={styles.tdValue}> 4561, Sam Huston Rd, TX, 78026 </Text>
                                     </View>
                                 </View>
                             </View>
                         </View>
                     </View>
-                    -----------------------------------------------------------
+                    
                     <View style={styles.tableRow} >  
                         <View style={styles.tableColMain} >
                             <View style={styles.tableRow}  > 
@@ -461,7 +992,7 @@ export const LoanInfoDocument=() =>{
                             </View>
                         </View>
                     </View>
-                    -----------------------------------------------------------
+                    
                     <View style={styles.tableRow} >  
                         <View style={styles.tableColMain} >
                             <View style={styles.tableRow}  > 
@@ -487,7 +1018,7 @@ export const LoanInfoDocument=() =>{
                         </View>
                     </View>
                    
-                    -----------------------------------------------------------
+                    
                     <View style={styles.tableRow} >  
                         <View style={styles.tableColMain} >
                             <View style={styles.tableRow}  > 
@@ -512,7 +1043,7 @@ export const LoanInfoDocument=() =>{
                             </View>
                         </View>
                     </View>
-                    -----------------------------------------------------------
+                    
                     <View style={styles.tableRow} >  
                         <View style={styles.tableColMain} >
                             <View style={styles.tableRow}  > 
@@ -537,7 +1068,7 @@ export const LoanInfoDocument=() =>{
                             </View>
                         </View>
                     </View>
-                    -----------------------------------------------------------
+                    
                     <View style={styles.tableRow} >  
                         <View style={styles.tableColMain} >
                             <View style={styles.tableRow}  > 
@@ -562,7 +1093,7 @@ export const LoanInfoDocument=() =>{
                             </View>
                         </View>
                     </View>
-                    -----------------------------------------------------------
+                    
                     <View style={styles.tableRow} >  
                         <View style={styles.tableColMain} >
                             <View style={styles.tableRow}  > 
@@ -588,8 +1119,8 @@ export const LoanInfoDocument=() =>{
                         </View>
                     </View>
                 </View>                
-                <Text style={styles.pageNumber}  render={({ pageNumber, totalPages }) => `${pageNumber} / ${totalPages}`}  />
-                <View style={{backgroundColor:'green', height:'5', position:"absolute", bottom:0, left:0,right:0}} ></View>
+                <Text style={styles.pageNumber}  render={({ pageNumber, totalPages }) => `${pageNumber} / ${totalPages}`} fixed  />
+                <View style={{backgroundColor:'green', height:'5', position:"absolute", bottom:0, left:0,right:0}} fixed ></View>
             </Page>
         </Document>
     );
